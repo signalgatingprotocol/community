@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discussion
+    url: https://github.com/orgs/signalgatingprotocol/discussions
+    about: Questions, ideas, and design conversations. Start here if you're not sure.
+  - name: Specification
+    url: https://signalgatingprotocol.github.io/specification
+    about: The protocol specification. Read before filing protocol-level issues.
+  - name: Security report (private)
+    url: https://github.com/signalgatingprotocol/community/security/advisories/new
+    about: Report a vulnerability privately. Do not open a public issue.

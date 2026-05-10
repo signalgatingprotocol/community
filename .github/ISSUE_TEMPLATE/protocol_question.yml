@@ -1,0 +1,32 @@
+name: Protocol question
+description: A specific question about the spec that needs a written answer.
+labels: [question, spec]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Open-ended discussions belong in
+        [Discussions](https://github.com/orgs/signalgatingprotocol/discussions).
+        Use this template only when you need a written, citable answer in the
+        issue tracker — typically because you're implementing against the spec.
+  - type: input
+    id: section
+    attributes:
+      label: Spec section
+      description: URL or heading of the section your question is about.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: State the question so it can be answered yes/no or with a single decision.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Why it matters
+      description: What you're building, and what the answer changes.
+    validations:
+      required: true
