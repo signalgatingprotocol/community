@@ -1,0 +1,39 @@
+name: RFC proposal (sketch)
+description: An early sketch of a protocol change. Becomes a real RFC if it gains traction.
+labels: [rfc-sketch]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is for the moment **before** you've written a full RFC. If your
+        idea is already concrete, skip this and open a pull request against
+        [`rfcs/`](https://github.com/signalgatingprotocol/community/tree/main/rfcs)
+        using [`0000-template.md`](https://github.com/signalgatingprotocol/community/blob/main/rfcs/0000-template.md).
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: One paragraph. The problem in a user's or implementer's words.
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: Proposed change
+      description: One paragraph. What you'd add, remove, or rename.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you've considered and rejected
+      description: At least one alternative. "Do nothing" counts.
+    validations:
+      required: true
+  - type: textarea
+    id: surface
+    attributes:
+      label: Protocol surface affected
+      description: Signals, Processors, GatePlans, Receipts, conformance, versioning, other.
+    validations:
+      required: true

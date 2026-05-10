@@ -1,0 +1,51 @@
+name: Bug report
+description: Behavior that contradicts the spec or the documented SDK contract.
+labels: [bug, needs-triage]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bugs in a specific SDK belong in that SDK's repository. This template
+        is for protocol-level bugs and bugs in this repository's content.
+  - type: input
+    id: where
+    attributes:
+      label: Where
+      description: Repository, file, or specification section where the bug lives.
+      placeholder: e.g. spec / signals / provenance
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What the spec or documentation says should happen.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What happens instead. Include exact output where relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproduction
+      description: Smallest set of steps, code, or signals that demonstrates the bug.
+      render: markdown
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Spec version, SDK version, or commit SHA.
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional context
+      description: Logs, links, related issues. Optional.
