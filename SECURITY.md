@@ -1,48 +1,48 @@
-# Security Policy
+# Security policy
 
-## Reporting a vulnerability
+## Report privately
 
-**Do not open a public issue.**
+Do not open a public issue for a suspected vulnerability.
 
-Report privately through GitHub's [private vulnerability reporting][gh-pvr]
-on this repository. If that is not available to you, email the maintainers
-listed in [`.github/CODEOWNERS`](./.github/CODEOWNERS) directly.
+Use GitHub's private vulnerability reporting in the affected repository. If the
+affected repository does not expose private reporting, use this repository's
+[private advisory form](https://github.com/signalgatingprotocol/community/security/advisories/new)
+and identify the affected repository.
 
 Include:
 
-- What you found.
-- How to reproduce it — exact steps, minimal repro if possible.
-- Affected versions or commits.
-- Your assessment of impact.
+- affected version, tag, or commit;
+- impact and affected trust boundary;
+- minimal reproduction steps or proof of concept;
+- known mitigations;
+- whether the issue is already public or actively exploited.
 
-You will get an acknowledgement within **72 hours**.
+Maintainers will coordinate disclosure through the private advisory. Active
+exploitation or a public exploit may require accelerated mitigation and
+communication.
 
-## What we treat as a vulnerability
+## Supported versions
 
-- Schema or wire-format flaws that allow processors to be activated outside
-  their declared conditions.
-- GatePlan production paths that bypass declared gates.
-- Context minimization failures that leak features the processor was not
-  authorized to receive.
-- Receipt forgery, tampering, or replay.
-- Protocol-level denial of service against conformant implementations.
-- Vulnerabilities in code published under this organization.
+Until stable releases exist, security fixes target the latest default branch.
+After tagged releases begin, this file will list the supported release lines.
 
-## Coordinated disclosure
+## Current security scope
 
-We follow a 90-day standard disclosure window. We will work with you on a
-shorter window if a fix lands sooner, or a longer window if active
-exploitation makes a quiet fix safer for users. Either way, the window is
-agreed in writing.
+Security-sensitive behavior includes:
 
-You will be credited in the advisory unless you ask not to be.
+- unauthorized signal delivery or gate bypass;
+- wire-format confusion or unsafe deserialization;
+- forged, corrupted, or unsafe trajectory replay data;
+- cross-agent context or metadata exposure;
+- denial of service against current implementations;
+- dependency or release-pipeline compromise.
 
-## Scope
+Design concerns about features that are not implemented are not vulnerabilities.
+Raise those through the public RFC process unless disclosure would reveal an
+exploitable weakness in current code.
 
-This policy covers repositories under the
-[`signalgatingprotocol`](https://github.com/signalgatingprotocol)
-organization. Vulnerabilities in third-party implementations of SGP should
-be reported to the implementation's own maintainers; we are happy to help
-coordinate.
+## Third-party implementations
 
-[gh-pvr]: https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability
+Report vulnerabilities in a third-party implementation to its maintainer. The
+SGP maintainers can help coordinate when the issue also affects the shared
+protocol or reference implementation.

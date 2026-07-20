@@ -34,6 +34,6 @@ body:
     id: surface
     attributes:
       label: Protocol surface affected
-      description: Signals, Processors, GatePlans, Receipts, conformance, versioning, other.
+      description: Signal, Gate, Agent, Mesh, wire format, trajectory receipts, conformance, versioning, design-stage control plane, or other.
     validations:
       required: true

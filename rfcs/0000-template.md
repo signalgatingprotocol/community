@@ -1,65 +1,69 @@
 ---
-title: <One-line title — what changes>
+title: <one-line title>
 authors: [<github-handle>, ...]
-status: draft           # draft | proposed | accepted | rejected | superseded
+status: draft # draft | proposed | accepted | rejected | postponed | superseded
 created: YYYY-MM-DD
-target-version: <e.g. 0.4.0, or "next-major">
-supersedes: <RFC number, if any>
-superseded-by: <RFC number, if any>
+target-version: <version or unassigned>
+supersedes: <RFC number or none>
+superseded-by: <RFC number or none>
 ---
 
 # Summary
 
-One paragraph. What changes, and what becomes possible because of it.
+One paragraph describing what changes and what becomes possible.
 
 # Motivation
 
-Why this is worth doing now. The problem in the user's words. Concrete
-scenarios that are painful today and stop being painful after this RFC
-lands.
+Describe the concrete user or implementer problem and why it belongs at the
+protocol layer.
 
 # Proposal
 
-The change, in detail. Schemas, wire formats, types, semantics. Pseudocode
-or full examples where they sharpen meaning.
+Define schemas, wire formats, types, and semantics precisely enough for an
+independent implementation.
 
-A reader who has read the existing spec must be able to implement this RFC
-from this section alone.
+## Schema and wire changes
 
-## Schema changes
-
-Show the diff against the current schemas. New fields, removed fields,
-changed types. State which are required vs optional and what defaults
-apply.
+List fields, types, defaults, identifiers, encoding, and unknown-field behavior.
+Write `None` if the wire format does not change.
 
 ## Behavior changes
 
-Describe runtime behavior precisely. Use MUST / SHOULD / MAY in the
-[RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) sense.
+Use MUST, SHOULD, and MAY in the
+[BCP 14](https://www.rfc-editor.org/info/bcp14) sense where normative strength
+matters.
 
 ## Compatibility
 
-What breaks. Who has to do work. What deprecation window applies.
+State what breaks, who must act, and what migration or deprecation is required.
+
+# Security and privacy
+
+Describe trust boundaries, authorization, data exposure, replay, denial of
+service, and abuse cases.
+
+# Conformance
+
+Provide required tests or test vectors, including invalid and boundary cases.
 
 # Examples
 
-At least one end-to-end example showing a Signal entering, GatePlans being
-produced, processors activating, and Receipts emitted.
+Show at least one end-to-end flow using Signal, Gate, Agent, and Mesh, or
+explicitly introduce and justify new vocabulary.
 
 # Drawbacks
 
-Honest. What's worse after this lands.
+State what becomes more complex, slower, or harder to operate.
 
 # Alternatives
 
-What else was considered. Why those were rejected. "Do nothing" is always
-an alternative; say what's wrong with it.
+Include the status quo and explain why rejected approaches are insufficient.
 
 # Open questions
 
-What you don't know yet, framed so a reviewer can help answer it.
+List unresolved decisions. Write `None` when ready for a decision.
 
 # Adoption plan
 
-Tracking issues, target SDK versions, conformance test additions, docs to
-update, migration notes. How we will know the change actually shipped.
+List specification, conformance, implementation, documentation, migration,
+release, and rollback work.
