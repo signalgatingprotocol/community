@@ -1,57 +1,50 @@
 # Contributing
 
-There are three ways in. Pick the smallest one that fits.
+Choose the smallest path that fits the change.
 
-## 1. Discuss
+## Discuss
 
-For questions, ideas, half-formed thoughts, and ecosystem signal:
+Use [GitHub Discussions](https://github.com/orgs/signalgatingprotocol/discussions)
+for questions, early ideas, prior art, and design exploration.
 
-→ [GitHub Discussions](https://github.com/orgs/signalgatingprotocol/discussions)
+## Open an issue
 
-You do not need to know if your idea is good. You need to write it down so
-others can react to it.
+Use the [issue templates](https://github.com/signalgatingprotocol/community/issues/new/choose)
+for a reproducible protocol documentation bug, a focused question, or an RFC
+sketch.
 
-## 2. Open an issue
+Implementation bugs belong in the affected SDK repository.
 
-For concrete bugs and concrete proposals that don't yet need an RFC:
+## Submit an RFC
 
-→ [New issue](https://github.com/signalgatingprotocol/community/issues/new/choose)
+Changes to the current protocol surface or adoption of a design-stage concept
+follow [`rfcs/README.md`](./rfcs/README.md). Copy
+[`rfcs/0000-template.md`](./rfcs/0000-template.md), complete every applicable
+section, and open one pull request containing one proposal.
 
-Pick a template. Fill it in. The templates exist so that the first reply
-you get is useful.
+## Submit implementation code
 
-## 3. Submit an RFC
+Start with the
+[`python-sdk`](https://github.com/signalgatingprotocol/python-sdk) and follow its
+repository-specific setup, lint, type-check, and test commands.
 
-For changes to the protocol surface — schemas, wire formats, conformance,
-versioning. The process is in [`rfcs/README.md`](./rfcs/README.md).
+## Review standard
 
-Open the RFC as a pull request against [`rfcs/`](./rfcs/). One file, one
-proposal. Use [`rfcs/0000-template.md`](./rfcs/0000-template.md).
+- Keep each pull request coherent and reviewable.
+- Explain the user or implementer impact.
+- Support protocol claims with a specification section, test vector, or
+  reproducible example.
+- Update specification and conformance material with public contract changes.
+- Separate unrelated refactors from behavior changes.
+- Resolve substantive review comments in the durable document or code, not only
+  in the conversation thread.
 
-## Code
+For documentation changes, render the affected Markdown, verify every changed
+link, and check terminology against the current maturity table in
+[`README.md`](./README.md).
 
-Code lives in the SDK repositories — start with
-[`python-sdk`](https://github.com/signalgatingprotocol/python-sdk). Follow
-that repo's contribution guide for build, lint, and test conventions.
+## License and conduct
 
-## Standards we hold ourselves to
-
-- **Clarity over cleverness.** If a reviewer needs a paragraph to understand
-  a function, the function is wrong, not the reviewer.
-- **Small diffs.** One change per pull request. Refactors that aren't part of
-  the change ship separately.
-- **Spec first.** Behavior that affects implementers is documented before it
-  is merged.
-- **No dead code.** No commented-out blocks, no "future use" stubs, no
-  vestigial flags.
-- **Receipts everywhere.** If we change behavior, the changelog and the
-  release notes say so plainly.
-
-## Licensing of contributions
-
-By submitting a contribution, you agree it is licensed under Apache 2.0 — the
-license of this repository — and that you have the right to submit it.
-
-## Conduct
-
-By participating, you agree to the [Code of Conduct](./CODE_OF_CONDUCT.md).
+By submitting a contribution, you agree that it is licensed under Apache 2.0
+and that you have the right to submit it. Participation is governed by the
+[Code of Conduct](./CODE_OF_CONDUCT.md).
