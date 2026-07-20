@@ -1,44 +1,47 @@
 # Code of Conduct
 
-We're building a protocol meant to be trusted. We hold the community to the
-same bar.
+SGP project spaces must support direct technical disagreement without personal
+abuse or exclusion.
 
-## The rules
+## Expected behavior
 
-1. **Be useful.** Bring evidence, code, or a clear question. Vague is the
-   enemy of progress.
-2. **Be direct, not cruel.** Critique work, never people. "This is wrong
-   because X" is welcome. "You are an idiot" is not.
-3. **Assume good faith — once.** Read what was written before reacting.
-   Repeat offenders lose that benefit.
-4. **No harassment.** No demeaning, intimidating, or sexualized conduct
-   toward anyone, anywhere we operate. Public or private.
-5. **No spam, no astroturf, no impersonation.**
+- Critique ideas, evidence, code, and specifications, not people.
+- State technical objections precisely and respond to the strongest version of
+  another contributor's argument.
+- Respect privacy, boundaries, and requests to stop unwanted contact.
+- Make project decisions on technical merit and documented project needs.
+
+## Unacceptable behavior
+
+- Harassment, threats, stalking, discrimination, or sexualized conduct.
+- Personal insults, demeaning language, or deliberate intimidation.
+- Publishing another person's private information without permission.
+- Spam, impersonation, astroturfing, or sustained disruption of project spaces.
+- Retaliation against someone who raises a good-faith conduct concern.
 
 ## Scope
 
-These rules apply in every space the project runs — repositories, issues,
-pull requests, discussions, chat, events — and to private interactions when
-they affect a community member's safety or ability to participate.
+This policy applies in repositories, issues, pull requests, discussions, project
+events, and private interactions that materially affect participation in the
+project.
 
-## Enforcement
+## Reporting and enforcement
 
-Report violations privately to the maintainers listed in
-[`.github/CODEOWNERS`](./.github/CODEOWNERS), or via GitHub's report-abuse
-flow. Reports are confidential.
+Use [GitHub's report-abuse flow](https://support.github.com/contact/report-abuse)
+for platform-level abuse. For a confidential project moderation report, use the
+[`community` private advisory form](https://github.com/signalgatingprotocol/community/security/advisories/new)
+and begin the title with `Conduct report`.
 
-Maintainers will:
+A maintainer named in a report must recuse. A non-conflicted maintainer reviews
+the evidence, gives the reported person an opportunity to respond when safe,
+and records the action taken. Actions may include a warning, content removal,
+temporary restriction, or permanent exclusion from project spaces.
 
-1. Acknowledge within 72 hours.
-2. Investigate.
-3. Act. Actions range from a private note, to a public correction, to a
-   temporary or permanent ban from project spaces.
-
-Maintainers are subject to the same rules. Reports about a maintainer go to
-the other maintainers.
+An affected person may appeal by sending new evidence or identifying a process
+failure through the same private channel. A different non-conflicted maintainer
+reviews the appeal when available.
 
 ## Attribution
 
-This document is original to SGP and inspired by the spirit of the
-[Contributor Covenant](https://www.contributor-covenant.org/), kept short on
-purpose.
+This policy is informed by the
+[Contributor Covenant](https://www.contributor-covenant.org/).

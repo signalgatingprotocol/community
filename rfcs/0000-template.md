@@ -1,65 +1,79 @@
 ---
-title: <One-line title — what changes>
+title: <one-line title>
 authors: [<github-handle>, ...]
-status: draft           # draft | proposed | accepted | rejected | superseded
+shepherd: <github-handle or unassigned>
+status: draft # draft | proposed | accepted | rejected | postponed | superseded
 created: YYYY-MM-DD
-target-version: <e.g. 0.4.0, or "next-major">
-supersedes: <RFC number, if any>
-superseded-by: <RFC number, if any>
+discussion: <URL>
+spec-pr: <URL or none>
+target-version: <version or unassigned>
+decision-date: <YYYY-MM-DD or none>
+supersedes: <RFC number or none>
+superseded-by: <RFC number or none>
 ---
 
 # Summary
 
-One paragraph. What changes, and what becomes possible because of it.
+State the change and what it makes possible.
 
 # Motivation
 
-Why this is worth doing now. The problem in the user's words. Concrete
-scenarios that are painful today and stop being painful after this RFC
-lands.
+Describe the concrete user or implementer problem and why it should be solved at
+the protocol layer.
 
 # Proposal
 
-The change, in detail. Schemas, wire formats, types, semantics. Pseudocode
-or full examples where they sharpen meaning.
+Define the complete behavior. A competent independent implementer should not
+need private context to build it.
 
-A reader who has read the existing spec must be able to implement this RFC
-from this section alone.
+## Normative behavior
 
-## Schema changes
+Use MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY as defined by
+[BCP 14](https://www.rfc-editor.org/info/bcp14) when normative strength matters.
 
-Show the diff against the current schemas. New fields, removed fields,
-changed types. State which are required vs optional and what defaults
-apply.
+## Schema and wire changes
 
-## Behavior changes
+List fields, types, defaults, identifiers, encoding, version negotiation, and
+unknown-field behavior. Write `None` if the wire format does not change.
 
-Describe runtime behavior precisely. Use MUST / SHOULD / MAY in the
-[RFC 2119](https://datatracker.ietf.org/doc/html/rfc2119) sense.
+## State and failure semantics
 
-## Compatibility
+Define ordering, retries, idempotency, timeouts, partial failure, recovery, and
+observable outcomes.
 
-What breaks. Who has to do work. What deprecation window applies.
+# Security and privacy
+
+Describe trust boundaries, authorization, data exposure, resource exhaustion,
+replay, downgrade, and abuse cases.
+
+# Compatibility and migration
+
+State what breaks, who must act, deprecation timing, and how mixed versions
+interoperate.
+
+# Conformance
+
+Provide required tests or test vectors, including invalid and boundary cases.
+
+# Operational impact
+
+Describe latency, throughput, storage, observability, rollout, and support cost.
 
 # Examples
 
-At least one end-to-end example showing a Signal entering, GatePlans being
-produced, processors activating, and Receipts emitted.
-
-# Drawbacks
-
-Honest. What's worse after this lands.
+Show at least one end-to-end flow using the current Signal, Gate, Agent, and Mesh
+vocabulary, or explicitly introduce and justify new vocabulary.
 
 # Alternatives
 
-What else was considered. Why those were rejected. "Do nothing" is always
-an alternative; say what's wrong with it.
+Include the status quo and explain why each rejected approach is insufficient.
 
-# Open questions
+# Rollout and rollback
 
-What you don't know yet, framed so a reviewer can help answer it.
+List specification, conformance, SDK, documentation, migration, release, and
+rollback work.
 
-# Adoption plan
+# Unresolved questions
 
-Tracking issues, target SDK versions, conformance test additions, docs to
-update, migration notes. How we will know the change actually shipped.
+List decisions that remain open. Write `None` when the RFC is ready for final
+comment.

@@ -1,60 +1,50 @@
-# Signal Gating Protocol
+# Signal Gating Protocol community
 
-**The executive function layer for agent graphs.**
+Public governance and RFCs for typed, gated, observable signal flow in
+multi-agent systems.
 
-Agents are getting better. The graphs they form are not. There is no shared
-control plane. Every team reinvents routing, gating, context shaping, and
-auditability — incompatibly. SGP fixes that.
+## Current model
 
-SGP is an open protocol. It standardizes five things, and only five things:
+| Primitive | Responsibility |
+| --- | --- |
+| **Signal** | Typed, immutable event with identity, lineage, priority, and metadata. |
+| **Gate** | Composable policy that admits, drops, transforms, or controls signal flow. |
+| **Agent** | Asynchronous signal processor with typed handlers and lifecycle. |
+| **Mesh** | Directed agent topology with gated edges and coordination patterns. |
 
-1. **Processors** — what an agent is, and what activates it.
-2. **Signals** — typed events with features and provenance.
-3. **GatePlans** — the executive router's decision about what runs next.
-4. **Context minimization** — only the inputs a processor needs.
-5. **Receipts** — verifiable records of what ran and why.
+The [Python SDK](https://github.com/signalgatingprotocol/python-sdk) is the
+reference implementation.
 
-That is the surface. Everything else composes on top.
+## Maturity
 
----
+| Surface | Status |
+| --- | --- |
+| Signal, Gate, Agent, and Mesh runtime | Implemented in the alpha Python SDK |
+| JSON signal wire envelope and trajectory receipts | Implemented in the alpha Python SDK |
+| Cross-runtime interoperability and conformance suite | Draft |
+| GatePlan and default-deny control plane | Design stage |
 
-## What SGP is not
-
-- Not a tool protocol. That is [MCP](https://modelcontextprotocol.io).
-- Not agent chat. That is A2A.
-- Not commerce. That is UCP.
-
-SGP is the missing layer between them: the executive function that decides
-which processor runs, on which signal, with which context, and proves it
-afterward.
-
----
+Design-stage concepts are proposals, not current protocol requirements. They
+become part of SGP only through the RFC, specification, conformance, and release
+process described in this repository.
 
 ## Start here
 
-| Path | Where |
-|------|-------|
-| Read the spec | [signalgatingprotocol.github.io/specification](https://signalgatingprotocol.github.io/specification) |
-| Build with the SDK | [signalgatingprotocol/python-sdk](https://github.com/signalgatingprotocol/python-sdk) |
-| Discuss the protocol | [GitHub Discussions](https://github.com/orgs/signalgatingprotocol/discussions) |
-| Propose a change | [RFC process](./rfcs/README.md) |
-| Report a vulnerability | [SECURITY.md](./SECURITY.md) |
+| Goal | Destination |
+| --- | --- |
+| Read the current draft | [Specification](https://signalgatingprotocol.github.io/specification/) |
+| Build with the reference implementation | [Python SDK](https://github.com/signalgatingprotocol/python-sdk) |
+| Ask a question or challenge the design | [Discussions](https://github.com/orgs/signalgatingprotocol/discussions) |
+| Propose a protocol change | [RFC process](./rfcs/README.md) |
+| Understand project decisions | [Governance](./GOVERNANCE.md) |
+| Report a vulnerability privately | [Security policy](./SECURITY.md) |
 
----
+## Repository scope
 
-## This repository
-
-This is the public home of the SGP community. It holds:
-
-- **Governance** — how the protocol evolves. See [GOVERNANCE.md](./GOVERNANCE.md).
-- **RFCs** — substantive protocol changes. See [rfcs/](./rfcs/).
-- **Conduct** — how we work together. See [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
-- **Contribution paths** — see [CONTRIBUTING.md](./CONTRIBUTING.md).
-
-Implementation lives in the SDK repositories. Specification text lives on the
-website. This repo is for the human and process layer that sits around them.
-
----
+This repository contains governance, RFCs, contribution guidance, conduct
+rules, and protocol-level issue templates. Executable implementation work
+belongs in the affected SDK repository. Published documentation and the draft
+specification live on the project website.
 
 ## License
 
